@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <header>
+        <div class="blog-header">
+            <h1>Meu Blog</h1>
+            <img src="img/pexels-maurice-engelen-15266804.jpg" alt="banner">
+            <!-- Barra de pesquisa -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button type="button" onclick="searchPosts()">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="banner">
+        <img src="img/380-2.jpg" alt="banner">
+    </div> -->
+    <main>
+    <br> 
+        
+        <section class="posts">
+            <!-- Postagem 1 -->
+            <article>
+                <h2>O cão é o melhor amigo do homem: descubra a origem dessa frase aqui!</h2>
+                <img src="img/380-4.jpg" alt="zoologico">
+                <p>Com certeza, você já ouviu falar que o cão é o melhor amigo do homem, correto? Quem é tutor de um cãozinho pode imaginar o motivo pelo qual essa afirmação surgiu e sabe que ela é verdadeira, não é mesmo?
+
+                    Se você vai adotar um pet futuramente e quer saber mais sobre a relação de amizade entre o cão e o homem, continue a leitura deste texto! O blog da Petz vai explicar como essa expressão surgiu e por que o cachorro é o melhor amigo do homem!
+                    
+                    </p>
+              <br>
+            </article>
+            <!-- Postagem 2 -->
+            <article>
+                <h2>Como surgiu a expressão “o cão é o melhor amigo do homem</h2>
+                <img src="img/pexels-david-kanigan-15347225.jpg" alt="pratos">
+                <p>Mesmo que ele não tenha dito com essas palavras, a frase foi atribuída ao advogado americano George Graham Vest. Em 1869, Vest defendeu o agricultor Charles Burden quando ele queria processar o vizinho, Leonidas Hornsby, por matar o seu cachorro, um foxhound chamado de Old Drum.</p>
+            </article>
+        </section>
+        <aside class="sidebar">
+            <section>
+                <h2>A história entre o cão e o homem</h2>
+                <img src="img/pexels-ivor-forrest-14935569.jpg" alt="foto de blogueiroS"
+                <p>Essa conexão é antiga, e o início da relação já foi explicado por diversas teorias. Atualmente, a mais aceita de todas afirma que tudo se originou por uma questão de interesse e sobrevivência. Desde então, o cão é o melhor amigo do homem..</p>
+            </section>
+            <section>
+                <br>
+                <h2>Como o comportamento do cão ajuda o homem?</h2>
+                <img src="img/380-1.jpg"anuncio">
+                <br>
+                <h1>Muito se fala sobre como o comportamento do homem ajuda o cão. Isso é um fato, afinal, esses animais dependem dos tutores para poderem ter mais saúde e qualidade de vida.</h1>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <p>Direitos Autorais &copy; 2024 Meu Blog</p>
+    </footer>
+
+    <script>
+        function searchPosts() {
+            var input, filter, articles, article, h2, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            articles = document.getElementsByTagName("article");
+            for (i = 0; i < articles.length; i++) {
+                article = articles[i];
+                h2 = article.getElementsByTagName("h2")[0];
+                txtValue = h2.textContent || h2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    article.style.display = "";
+                } else {
+                    article.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
